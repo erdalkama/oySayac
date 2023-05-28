@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="voteCounter.MainPage"
+             Title="Sayaç"
+             Shell.TitleColor="Black"
+             Shell.BackgroundColor="WhiteSmoke"
+             BackgroundColor="WhiteSmoke">
+    <ScrollView>
+        <Grid RowDefinitions="*,*,auto" RowSpacing="10">
+             <StackLayout Spacing="5" Grid.Row="0" Padding="20">
+            <Image Source="foto2.png" HeightRequest="150" HorizontalOptions="Center" />
+            <Label x:Name="countLabel1" Text="0" HorizontalOptions="Center" FontSize="24" />
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                     <Button BackgroundColor="Black" Text="+" HorizontalOptions="Center" WidthRequest="60" Clicked="AddButton1_Clicked" />
+            <Button Text="-" BackgroundColor="Black" HorizontalOptions="Center" WidthRequest="60" Clicked="MinusButton1_Clicked" />
+       
+
+                </HorizontalStackLayout>
+                 <Label Text="Kemal Kılıçdaroğlu" HorizontalOptions="Center" FontSize="Title"/>
+             
+                </StackLayout>
+            <StackLayout Spacing="5" Grid.Row="1">
+            <Image Source="foto1.png" HeightRequest="150" HorizontalOptions="Center" />
+            <Label x:Name="countLabel2" Text="0" HorizontalOptions="Center" FontSize="24" />
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+
+                      <Button Text="+" BackgroundColor="Black" HorizontalOptions="Center" WidthRequest="60" Clicked="AddButton2_Clicked" />
+            <Button Text="-" BackgroundColor="Black" HorizontalOptions="Center" WidthRequest="60" Clicked="MinusButton2_Clicked" />
+      
+                </HorizontalStackLayout>
+                <Label Text="Recep Tayyip Erdoğan" HorizontalOptions="Center" FontSize="Title"/>
+                </StackLayout>
+            <StackLayout Grid.Row="2" >
+            <Button BackgroundColor="Black" Text="Temizle" HorizontalOptions="Center" WidthRequest="120" Clicked="ClearButton_Clicked" />
+        </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
